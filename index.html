@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실전 상담 네비게이터 v1.0</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="app-container">
+      <header id="app-header">
+        <div class="header-left">
+          <h1>상담 네비게이터</h1>
+        </div>
+        <div class="header-right">
+          <div id="path-display">시작</div>
+          <button id="btn-back" onclick="goBack()">⬅ 이전</button>
+          <button id="btn-reset" onclick="resetApp()">🔄 초기화</button>
+        </div>
+      </header>
+
+      <main id="app-main">
+        <div id="knowledge-base">
+          <div class="k-box">
+            <h4>💰 국비지원/내배카</h4>
+            <p>
+              • 과정/유형에 따라 훈련비 일부~전액 지원 가능 <br />• 자부담
+              여부는 개인 조건과 과정에 따라 달라짐 <br />• 내방 상담 시 내배카
+              가능 여부와 예상 자부담 확인 도움 가능
+            </p>
+          </div>
+          <div class="k-box">
+            <h4>📝 국민취업지원제도</h4>
+            <p>
+              • 1유형: 구직촉진수당 월 60만원 x 6개월 가능<br />• 2유형: 유형별
+              취업지원 서비스 및 해당 수당 연계. <br />• 상담 시 본인에게 맞는
+              지원 가능 제도 함께 확인 가능
+            </p>
+          </div>
+          <div class="k-box">
+            <h4>📍 내방 유도 필살기</h4>
+            <p>
+              • 전화상담은 기본 안내, 내방상담은 지원 조건과 과정 적합도까지 더
+              세밀하게 확인 가능합니다<br />• 직접 오시면 시설, 수업 방식,
+              결과물 예시까지 보고 본인에게 맞는 방향을 더 정확히 잡을 수
+              있습니다
+            </p>
+          </div>
+          <div class="left-section">
+            <div class="card situation-card">
+              <h3>┃ 상황 선택</h3>
+              <div id="option-container"></div>
+            </div>
+            <div class="card memo-card">
+              <div class="memo-header">
+                <h3>┃ 실시간 상담 메모</h3>
+                <button onclick="clearMemo()" class="btn-clear">초기화</button>
+              </div>
+              <textarea
+                id="consulting-memo"
+                placeholder="통화 중 중요한 내용은 여기에 바로 기록하세요..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <section id="navigation-panel">
+          <h2>상황 선택</h2>
+          <div id="button-container"></div>
+        </section>
+
+        <section id="dashboard-panel">
+          <article class="info-box question-box">
+            <h3>❓ 지금 질문할 것 (사고 가이드)</h3>
+            <ul id="q-list">
+              <li>좌측에서 유형을 선택해주세요.</li>
+            </ul>
+          </article>
+
+          <article class="info-box script-box">
+            <h3>💡 추천 멘트 (최고의 멘트 2개)</h3>
+            <div id="s-container">
+              <p>내용 없음</p>
+            </div>
+          </article>
+
+          <article class="info-box goal-box">
+            <h3>🎯 이번 통화 목표</h3>
+            <p id="g-text">기본 정보 파악 및 유형 분류</p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
