@@ -61,6 +61,31 @@ body {
   max-width: 100%;
   word-break: break-word;
 }
+.header-left {
+  display: flex;
+}
+.header-left h1{
+  margin-right: 10px;
+}
+#btn-contact {
+  margin-right: 5px;
+}
+.mode-btn{
+   padding: 8px 16px;
+  background-color: #b3dbff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.mode-btn:hover{
+  background-color: red;
+}
+.mode-btn.active{
+  background-color: red;
+}
 
 .header-right {
   display: flex;
@@ -257,6 +282,7 @@ body {
   gap: 10px;
   margin-bottom: 10px;
   flex-wrap: wrap;
+  color: #6cffe9;
 }
 
 #consulting-memo {
